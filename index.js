@@ -7,5 +7,12 @@ search.addEventListener("click", () => {
     .then(resp => resp.json())
     .then(result => {
         console.log(result.data.deliverable)
+        let findings = result.data.deliverable
+        let comment = document.getElementById("comment")
+        if(findings){
+            comment.textContent = "Hello Member"
+        }else{
+            comment.textContent = "Kindly Join Us"
+        }
     })
 })
