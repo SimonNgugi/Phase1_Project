@@ -33,3 +33,14 @@ homeButton.addEventListener("click", () => {
 })
 
 let form = document.getElementById("form")
+
+let contactUsButton = document.getElementById("contactUs")
+contactUsButton.addEventListener("click", () => {
+    newContent.innerHTML =""
+    let contactUsContainer = document.createElement("div")
+    let companyNamePar = document.createElement("h1")
+    companyNamePar.textContent = "My Cover"
+    contactUsContainer.appendChild(companyNamePar)
+    newContent.appendChild(contactUsContainer)
+    form.style.visibility = "hidden"
+})
